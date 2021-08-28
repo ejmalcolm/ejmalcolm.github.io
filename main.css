@@ -88,7 +88,7 @@ ul.nobull li {list-style-type: none}
   body {background: #00011b; color: #8EBCE9}
   body h2 {color: #89a3d8;} /* subheadings on the navigation */
   body a { color: #6E85B2;}
-  body a:visited {color: #DBE2EF;}
+  body a:visited {color: #4d5d7e;}
   main > pre { background: rgb(249,247,247); color:#000}
   main > code { background:rgb(249,247,247); color:#000}
   body select { color: black; background-color: rgb(249,247,247);}
