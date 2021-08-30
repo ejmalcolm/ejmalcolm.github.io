@@ -16,7 +16,7 @@
 <section class="site-nav">
     <section>
         <ul class='nobull capital'>
-            <li><a href='about_me.html'>about me</a></li>
+            <li><a href='about.html'>about</a></li>
             <li><a href='mission.html'>mission</a></li>
             <li><a href='philosophy.html'>philosophy</a></li>
             <li><a href='support.html'>support</a></li>
@@ -43,6 +43,7 @@
         <h2><a id='tools'>tools</a></h2>
         <ul class='nobull capital'>
             <li><a href='tecemma.html'>tecemma</a></li>
+            <li><a href='matchup_calc.html'>melee matchup calc</a></li>
         </ul>
     </section>
     <section>
@@ -59,8 +60,53 @@
 </nav>
 
 <main>
-<h1>home</h1><img src='indigo.jpg' loading='lazy'/>
+<img src='matchupCalc_header.jpg'>
+<p>This tool simplifies the process of calculating a matchup ratio between two characters in Super Smash Bros. Melee.</p>
+
+<h2>Options</h2>
+<label>Dave's Stupid Rule (DSR):</label>
+<input type="checkbox" checked/>
+<br />
+<label>Winner Bans:</label>
+<input type="checkbox" checked/>
+<br />
+<label>Set Length:</label>
+<input width="1px" type="number" value="5"/>
+<br />
+
+<h2>Winning Percentages</h2>
+<p>In each field, enter the winning percentage of character 1 on that stage (0-100).</p>
+<table border='1'>
+
+  <tr>
+    <td><img width='150px' height='150px' src='stageThumbnails/BF.jpg'></td>
+    <td><img width='150px' height='150px' src='stageThumbnails/YS.png'></td>
+    <td><img width='150px' height='150px' src='stageThumbnails/DL.jpg'></td>
+  </tr>
+  <tr>
+    <td><input id='BF' type="number" value="50"/></td>
+    <td><input id='YS' type="number" value="50"/></td>
+    <td><input id='DL' type="number" value="50"/></td>
+  </tr>  
+
+  <tr>
+    <td><img width='150px' height='150px' src='stageThumbnails/FoD.png'></td>
+    <td><img width='150px' height='150px' src='stageThumbnails/PS.png'></td>
+    <td><img width='150px' height='150px' src='stageThumbnails/FD.png'></td>
+  </tr>
+
+  <tr>
+    <td><input id='FoD' type="number" value="50"/></td>
+    <td><input id='FD' type="number" value="50"/></td>
+    <td><input id='PS' type="number" value="50"/></td>
+  </tr>
+</table>
+
+<h2>Result</h2>
+<p>The matchup between the entered character and their opponent is [x/y].</p>
+
 </main>
+
 
 <footer><hr/>
 <span style='float:right'><a href='https://github.com/ejmalcolm/ejmalcolm.github.io/edit/main/index.html'>[edit]</a></span>
