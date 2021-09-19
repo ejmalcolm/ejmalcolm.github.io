@@ -121,8 +121,8 @@ def calculateMatchup(stageRatios, counterStages, setLength, loserBans, DSR=True)
       winCount[1] += 1
   
   ratio = round(winCount[0] / (winCount[0]+winCount[1]) , 2)
-  print('The matchup ratio is %i/%i P1:P2.' %  (ratio*100, round(1-ratio, 2)*100) )
+  return '%i/%i' %  (ratio*100, round(1-ratio, 2)*100)
 
-stageRatios = {'BF': .5, 'YS': .5, 'DL': .5, 'FoD': .5, 'FD': .9, 'PS': .5}
-counterStages = ['FD']
-calculateMatchup(stageRatios, counterStages, setLength=5, loserBans=True, DSR=True)
+# stageRatios = {'BF': .5, 'YS': .5, 'DL': .5, 'FoD': .5, 'FD': .9, 'PS': .5}
+# counterStages = ['FD']
+# result = calculateMatchup(stageRatios, counterStages, setLength=5, loserBans=True, DSR=True)

@@ -45,6 +45,9 @@ main .project > * { margin-bottom: 30px }
 main .project p { padding:0px; margin-top: 0px; margin-bottom: 30px; }
 main .project img { display: block; max-width: 100%; }
 
+main .container {position: relative;}
+main .checkbox {position: absolute; top:3px; right:3px; }
+
 main .button.patreon { background-color: #e75942}
 main .button { background-color: #e75942;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;}
 main .button:hover { background-color: #727272 !important;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;}

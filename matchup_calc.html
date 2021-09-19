@@ -6,12 +6,16 @@
 <meta name='viewport' content='width=device-width,initial-scale=1'>
 <link rel='alternate' type='application/rss+xml' title='RSS Feed' href='../links/rss.xml' /><link rel='stylesheet' type='text/css' href='main.css'>
 <link rel='shortcut icon' type='image/png' href='../media/services/icon.png'>
+<title>ejm &mdash; home</title>
+</head>
+  
+<header>
+  <a href='index.html'><img src='indilogo.jpg' height='50'></a>
+</header>
 
-<title>ejm &mdash; home</title></head><body><header>
-<a href='index.html'><img src='indilogo.jpg' height='50'></a></header>
 
-
-<nav><details open>
+<nav>
+<details open>
 <summary>Menu</summary>
 <section class="site-nav">
     <section>
@@ -59,11 +63,84 @@
 </details>
 </nav>
 
+
 <main>
 <img src='matchupCalc_header.jpg'>
 <p>This tool simplifies the process of calculating a matchup ratio between two characters in Super Smash Bros. Melee.</p>
 
+<script>
+  function updateText() {
+    // get character names
+    var char1 = document.getElementById("char1select").value;
+    var char2 = document.getElementById("char2select").value;
+    // get matchup result
+    var matchupRatio = ' ';
+    // update text fields
+    document.getElementById("winpercentText").innerHTML = "In each field, enter the winning percentage of " + char1 + " against " + char2 + " on that stage (0-100%)";
+    document.getElementById("resultText").innerHTML = "The matchup between " + char1 + " and " + char2 + " is [x/y].";
+  }
+</script>
+
 <h2>Options</h2>
+<label>Matchup:</label>
+<select onchange="updateText()" id="char1select" name="Character One">
+  <option value="Fox">Fox</option>
+  <option value="Marth">Marth</option>
+  <option value="Jigglypuff">Jigglypuff</option>
+  <option value="Falco">Falco</option>
+  <option value="Shiek">Shiek</option>
+  <option value="Captain Falcon">Captain Falcon</option>
+  <option value="Peach">Peach</option>
+  <option value="Ice Climbers">Ice Climbers</option>
+  <option value="Pikachu">Pikachu</option>
+  <option value="Yoshi">Yoshi</option>
+  <option value="Samus">Samus</option>
+  <option value="Luigi">Luigi</option>
+  <option value="Dr. Mario">Dr. Mario</option>
+  <option value="Ganondorf">Ganondorf</option>
+  <option value="Mario">Mario</option>
+  <option value="Donkey Kong">Donkey Kong</option>
+  <option value="Young Link">Young Link</option>
+  <option value="Link">Link</option>
+  <option value="Game and Watch">Game and Watch</option>
+  <option value="Mewtwo">Mewtwo</option>
+  <option value="Roy">Roy</option>
+  <option value="Pichu">Pichu</option>
+  <option value="Ness">Ness</option>
+  <option value="Zelda">Zelda</option>
+  <option value="Kirby">Kirby</option>
+  <option value="Bowser">Bowser</option>
+</select>
+ vs. 
+<select onchange="updateText()" id="char2select" name="Character Two">
+  <option value="Fox">Fox</option>
+  <option value="Marth">Marth</option>
+  <option value="Jigglypuff">Jigglypuff</option>
+  <option value="Falco">Falco</option>
+  <option value="Shiek">Shiek</option>
+  <option value="Captain Falcon">Captain Falcon</option>
+  <option value="Peach">Peach</option>
+  <option value="Ice Climbers">Ice Climbers</option>
+  <option value="Pikachu">Pikachu</option>
+  <option value="Yoshi">Yoshi</option>
+  <option value="Samus">Samus</option>
+  <option value="Luigi">Luigi</option>
+  <option value="Dr. Mario">Dr. Mario</option>
+  <option value="Ganondorf">Ganondorf</option>
+  <option value="Mario">Mario</option>
+  <option value="Donkey Kong">Donkey Kong</option>
+  <option value="Young Link">Young Link</option>
+  <option value="Link">Link</option>
+  <option value="Game and Watch">Game and Watch</option>
+  <option value="Mewtwo">Mewtwo</option>
+  <option value="Roy">Roy</option>
+  <option value="Pichu">Pichu</option>
+  <option value="Ness">Ness</option>
+  <option value="Zelda">Zelda</option>
+  <option value="Kirby">Kirby</option>
+  <option value="Bowser">Bowser</option>
+</select>
+</br />
 <label>Dave's Stupid Rule (DSR):</label>
 <input type="checkbox" checked/>
 <br />
@@ -75,13 +152,30 @@
 <br />
 
 <h2>Winning Percentages</h2>
-<p>In each field, enter the winning percentage of character 1 on that stage (0-100%).</p>
+<p id="winpercentText"></p>
+<p>Mark the checkbox if that stage is a counterpick.</p>
+
 <table border='1'>
 
   <tr>
-    <td><img width='150px' height='150px' src='stageThumbnails/BF.jpg'></td>
-    <td><img width='150px' height='150px' src='stageThumbnails/YS.png'></td>
-    <td><img width='150px' height='150px' src='stageThumbnails/DL.jpg'></td>
+    <td> 
+      <div class='container'>
+        <img width='150px' height='150px' src='stageThumbnails/BF.jpg'>
+        <div class='checkbox'><input type="checkbox" /> </div>
+      </div>
+    </td>
+    <td>
+      <div class='container'>
+        <img width='150px' height='150px' src='stageThumbnails/YS.png'>
+        <div class='checkbox'><input type="checkbox" /> </div>
+      </div>
+    </td>
+    <td>
+      <div class='container'>
+        <img width='150px' height='150px' src='stageThumbnails/DL.jpg'>
+        <div class='checkbox'><input type="checkbox" /> </div>
+      </div>
+    </td>
   </tr>
   <tr>
     <td><input id='BF' type="number" value="50"/></td>
@@ -90,9 +184,24 @@
   </tr>  
 
   <tr>
-    <td><img width='150px' height='150px' src='stageThumbnails/FoD.png'></td>
-    <td><img width='150px' height='150px' src='stageThumbnails/PS.png'></td>
-    <td><img width='150px' height='150px' src='stageThumbnails/FD.png'></td>
+    <td>
+      <div class='container'>
+        <img width='150px' height='150px' src='stageThumbnails/FoD.png'>
+        <div class='checkbox'><input type="checkbox" /> </div>
+      </div>
+    </td>
+    <td>
+      <div class='container'>
+        <img width='150px' height='150px' src='stageThumbnails/PS.png'>
+        <div class='checkbox'><input type="checkbox" /> </div>
+      </div>
+    </td>
+    <td>
+      <div class='container'>
+        <img width='150px' height='150px' src='stageThumbnails/FD.png'>
+        <div class='checkbox'><input type="checkbox" checked/> </div>
+      </div>
+    </td>
   </tr>
 
   <tr>
@@ -103,8 +212,13 @@
 </table>
 
 <h2>Result</h2>
-<p>The matchup between the entered character and their opponent is [x/y].</p>
 
+<p id=resultText></p>
+
+
+<script>
+  updateText()
+</script>
 </main>
 
 
